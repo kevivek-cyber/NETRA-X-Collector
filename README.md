@@ -6,7 +6,20 @@ that can reach the Tor network, claims them, fetches the pages over Tor and
 posts them back. Every connection is outbound -- no ports to open, works
 behind NAT or on a hotspot.
 
-## Windows (two minutes)
+## Windows: one command
+
+Open **PowerShell as administrator** and run:
+
+```powershell
+irm https://raw.githubusercontent.com/kevivek-cyber/NETRA-X-Collector/main/install.ps1 | iex
+```
+
+It downloads the portable build (Python, libraries and Tor bundled -- nothing
+else to install), unpacks it to `C:\NETRA-X-Collector`, asks for the collector
+token once, adds a desktop shortcut and starts the collector. Run it again to
+update.
+
+## Windows, by hand
 
 1. Install **Python 3.10+** from python.org (tick "Add python.exe to PATH").
 2. Install **Tor Browser** to the Desktop (the default location). It does not

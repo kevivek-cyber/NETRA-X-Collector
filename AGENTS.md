@@ -2,6 +2,12 @@
 
 Goal: get the NETRA-X collector running on this PC and showing as online.
 
+**Windows, fastest path:** in an administrator PowerShell run
+`& ([scriptblock]::Create((irm https://raw.githubusercontent.com/kevivek-cyber/NETRA-X-Collector/main/install.ps1))) -Token <token>`
+(ask the human for the token). It installs a portable build with Python and
+Tor included and starts the collector; then check step 8 below. Use the
+manual steps only if that fails.
+
 1. Detect the OS.
 2. Ensure Python 3.10+ is installed (`py -3 --version` / `python3 --version`).
    If missing on Windows: `winget install -e --id Python.Python.3.12`.
